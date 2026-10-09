@@ -1,0 +1,16 @@
+
+.container {
+        color: red;
+        background-color: black;
+    }
+.body {
+    background-color: rgb(51, 51, 51);
+}
+.title {
+    color: white;
+    font-size: 30px;
+}
+.antares-logo {
+    width: 100px;
+    height: 100px;
+}
