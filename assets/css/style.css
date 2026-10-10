@@ -1,4 +1,4 @@
-/* ========== Base ========== */
+
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +31,7 @@ a {
     text-decoration: none;
 }
 
-/* ========== Top Navigation ========== */
+
 .top-nav {
     height: var(--top-nav-height);
     background: #000;
@@ -83,7 +83,7 @@ a {
     color: white;
 }
 
-/* Mobile menu toggle (hamburger) */
+
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -118,7 +118,7 @@ a {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Mobile sidebar backdrop */
+
 .sidebar-backdrop {
     display: none;
     position: fixed;
@@ -132,14 +132,14 @@ a {
     display: block;
 }
 
-/* ========== Docs Layout ========== */
+
 .docs-layout {
     display: flex;
     height: calc(100vh - var(--top-nav-height));
     margin-top: var(--top-nav-height);
 }
 
-/* ========== Sidebar ========== */
+
 .sidebar {
     width: 260px;
     background: var(--bg-sidebar);
@@ -177,7 +177,7 @@ a {
     color: var(--accent-hover);
 }
 
-/* Expandable groups */
+
 .sidebar-group {
     margin: 4px 0;
 }
@@ -223,7 +223,6 @@ a {
     display: block;
 }
 
-/* Nested sub-categories inside Commands */
 .sidebar-subgroup {
     margin: 2px 0;
 }
@@ -248,7 +247,6 @@ a {
     padding: 6px 14px;
 }
 
-/* ========== Main Content ========== */
 .content {
     flex: 1;
     overflow-y: auto;
@@ -280,7 +278,6 @@ a {
     margin-bottom: 14px;
 }
 
-/* ========== Welcome / About images ========== */
 .welcome-img {
     width: 10%;
     height: auto;
@@ -292,7 +289,6 @@ a {
     vertical-align: middle;
 }
 
-/* ========== FAQ ========== */
 .faq-item {
     padding: 14px 0;
     border-bottom: 1px solid var(--border);
@@ -372,7 +368,6 @@ a {
     margin-bottom: 6px;
 }
 
-/* ========== Simple pages (Terms / Privacy) ========== */
 .simple-page {
     max-width: 800px;
     margin: 80px auto 60px;
@@ -388,7 +383,7 @@ a {
     margin-bottom: 14px;
 }
 
-/* ========== Responsive ========== */
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
