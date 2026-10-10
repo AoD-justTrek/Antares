@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antares Documentation</title>
+    <link rel="icon" href="assets/img/antares.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <header class="top-nav">
+        <div class="top-nav-inner">
+            <a href="index.html" class="brand">
+                <img src="assets/img/antares.png" alt="Antares logo" class="brand-logo">
+                <span class="brand-name">Antares</span>
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="top-links">
+                <a href="index.html" class="active">Documentation</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Documentation Layout -->
+    <div class="docs-layout">
+
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link active" data-section="welcome">Welcome</a>
+                <a href="#" class="sidebar-link" data-section="about">About</a>
+                <a href="#" class="sidebar-link" data-section="faq">FAQ</a>
+
+                <!-- Commands (expandable) -->
+                <div class="sidebar-group">
+                    <button class="sidebar-group-toggle" data-group="commands">
+                        Commands
+                        <span class="chevron">›</span>
+                    </button>
+                    <div class="sidebar-group-items" id="commands-group">
+                        <a href="#" class="sidebar-sublink" data-section="cmd-help">/help</a>
+                        <a href="#" class="sidebar-sublink" data-section="cmd-commands">/commands</a>
+                        <a href="#" class="sidebar-sublink" data-section="cmd-relics">/relics</a>
+
+                        <!-- Inventory Management -->
+                        <div class="sidebar-subgroup">
+                            <button class="sidebar-group-toggle" data-group="cat-inventory">
+                                Inventory Management
+                                <span class="chevron">›</span>
+                            </button>
+                            <div class="sidebar-group-items">
+                                <a href="#" class="sidebar-sublink" data-section="cmd-lastdata-send">/lastdata send</a>
+                                <a href="#" class="sidebar-sublink" data-section="cmd-lastdata-settings">/lastdata settings</a>
+                                <a href="#" class="sidebar-sublink" data-section="cmd-lastdata-remove">/lastdata remove</a>
+                            </div>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="sidebar-subgroup">
+                            <button class="sidebar-group-toggle" data-group="cat-stats">
+                                Stats
+                                <span class="chevron">›</span>
+                            </button>
+                            <div class="sidebar-group-items">
+                                <a href="#" class="sidebar-sublink" data-section="cmd-stats">/stats</a>
+                            </div>
+                        </div>
+
+                        <!-- Leaderboards -->
+                        <div class="sidebar-subgroup">
+                            <button class="sidebar-group-toggle" data-group="cat-leaderboards">
+                                Leaderboards
+                                <span class="chevron">›</span>
+                            </button>
+                            <div class="sidebar-group-items">
+                                <a href="#" class="sidebar-sublink" data-section="cmd-lb-item">/lb_item</a>
+                                <a href="#" class="sidebar-sublink" data-section="cmd-lb-set">/lb_set</a>
+                                <a href="#" class="sidebar-sublink" data-section="cmd-lb-category">/lb_category</a>
+                            </div>
+                        </div>
+
+                        <!-- Trackers -->
+                        <div class="sidebar-subgroup">
+                            <button class="sidebar-group-toggle" data-group="cat-trackers">
+                                Trackers
+                                <span class="chevron">›</span>
+                            </button>
+                            <div class="sidebar-group-items">
+                                <a href="#" class="sidebar-sublink" data-section="cmd-eda">/eda</a>
+                                <a href="#" class="sidebar-sublink" data-section="cmd-eta">/eta</a>
+                            </div>
+                        </div>
+
+                        <!-- Market -->
+                        <div class="sidebar-subgroup">
+                            <button class="sidebar-group-toggle" data-group="cat-market">
+                                Market
+                                <span class="chevron">›</span>
+                            </button>
+                            <div class="sidebar-group-items">
+                                <a href="#" class="sidebar-sublink" data-section="cmd-price_history">/price_history</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guides (expandable) -->
+                <div class="sidebar-group">
+                    <button class="sidebar-group-toggle" data-group="guides">
+                        Guides
+                        <span class="chevron">›</span>
+                    </button>
+                    <div class="sidebar-group-items" id="guides-group">
+                        <a href="#" class="sidebar-sublink" data-section="guide-inventory">Getting Started: Inventory</a>
+                        <a href="#" class="sidebar-sublink" data-section="guide-sniper">Getting Started: Sniper</a>
+                        <!-- Add more guides here -->
+                    </div>
+                </div>
+
+                <a href="#" class="sidebar-link" data-section="news">News</a>
+                <a href="#" class="sidebar-link" data-section="credits">Credits</a>
+            </nav>
+        </aside>
+
+        <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+        <!-- Main Content -->
+        <main class="content" id="content">
+
+            <!-- WELCOME -->
+            <section id="welcome" class="content-section active">
+                <img src="assets/img/Baro.webp" alt="Welcome" class="welcome-img">
+                <h1>Hello world</h1>
+                <p>Welcome to the official documentation for <strong>Antares</strong> - a Discord bot built exclusively around Warframe.</p>
+                <p><em>Use the sidebar to explore commands, guides, and more.</em></p>
+
+            </section>
+
+            <!-- ABOUT -->
+            <section id="about" class="content-section">
+                <h1>About</h1>
+                <p><strong>Antares</strong> is a Warframe-focused Discord bot designed to help alliance and clan.</p>
+                <p><em>Made by -AoD-justTrek and -AoD-choobie.</em></p>
+
+                <p>
+                    <img src="assets/img/404SquadNotFound.png" alt="404 Squad Not Found alliance" class="alliance-img">
+                    It currently lives on a public Warframe alliance server "404 Squad Not Found" and provides tools tailored to the game.
+                </p>
+                <p><em>...</em></p>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq" class="content-section">
+                <h1>FAQ</h1>
+
+                <div class="faq-item">
+                    <h3><span class="faq-label">Q</span> Can I invite the bot to my server?</h3>
+                    <p><span class="faq-label">A</span> Not yet. Antares commands are currently available on a public Warframe alliance server, with some commands also available in the bot's DMs.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3><span class="faq-label">Q</span> Is the bot only for Warframe?</h3>
+                    <p><span class="faq-label">A</span> Yes. Antares is built exclusively for Warframe-related features.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3><span class="faq-label">Q</span> Does my submitted inventory update automatically?</h3>
+                    <p><span class="faq-label">A</span> <strong>Not everything updates automatically.</strong> It's recommended to manually update your inventory in the bot from time to time.</p>
+                    <p>Automatic updates depend on what's available through the Alecaframe public token. Currently, this includes owned/opened relics and trade history.</p>
+                    <p>If data isn't available through the public token, it cannot be automatically updated. In that case, Antares uses a snapshot of your last submitted <code>lastdata.dat</code> file.</p>
+                </div>
+            </section>
+
+
+
+            <!-- COMMAND EXAMPLES -->
+            <section id="cmd-help" class="content-section">
+                <h1>/help</h1>
+                <p>Your basic help command. Has an optional argument to show a specific help message.</p>
+            </section>
+
+            <section id="cmd-commands" class="content-section">
+                <h1>/commands</h1>
+                <p>Auto-generated list of all available commands, their descriptions, required and optional arguments.</pp>
+            </section>
+
+            <section id="cmd-relics" class="content-section">
+                <h1>/relics</h1>
+                <p>Look up relics by part, set, resurgence, or ducats.</p>
+                <p><em>...</em></p>
+            </section>
+
+            <section id="cmd-price_history" class="content-section">
+                <h1>/price_history</h1>
+                <p>Shows the price history of an item.</p>
+                <p><em>...</em></p>
+            </section>
+
+            <section id="cmd-lastdata-send" class="content-section">
+                <h1>/lastdata send</h1>
+                <p>Sends your inventory to the bot.</p>
+                <p><em>...</em></p>
+            </section>
+
+            <section id="cmd-lastdata-settings" class="content-section">
+                <h1>/lastdata settings</h1>
+                <p>Change your settings related to inventory.</p>
+                <p><em>...</em></p>
+            </section>
+
+            <section id="cmd-lastdata-remove" class="content-section">
+                <h1>/lastdata remove</h1>
+                <p>Remove your inventory from the bot.</p>
+                <p><em>...</em></p>
+            </section>
+
+            <section id="cmd-lb-item" class="content-section">
+                <h1>/lb item</h1>
+                <p>Shows a leaderboard for a specific item.</p>
+                <p><em>...</em></p>
+            </section>
+
+            <section id="cmd-lb-set" class="content-section">
+                <h1>/lb set</h1>
+                <p>Shows a leaderboard for a specific prime set.</p>
+                <p><em>...</em></p>
+            </section>
+
+            <section id="cmd-lb-category" class="content-section">
+                <h1>/lb category</h1>
+                <p>Shows a leaderboard for a specific category.</p>
+                <p><em>...</em></p>
+            </section>
+
+            <section id="cmd-eda" class="content-section">
+                <h1>/eda</h1>
+                <p>Shows current Elite Deep Archimedea rotation.</p>
+                <p><em>...</em></p>
+            </section>
+
+            <section id="cmd-eta" class="content-section">
+                <h1>/eta</h1>
+                <p>Shows current Elite Temporal Archimedea rotation.</p>
+                <p><em>...</em></p>
+            </section>
+
+            <section id="cmd-stats" class="content-section">
+                <h1>/stats</h1>
+                <p>
+                    Shows stats depending on what you pick, each category option has a unique view.
+                    Your stats by default but you can also select specific user.
+                </p>
+                <p><em>...</em></p>
+            </section>
+
+            <!-- GUIDES -->
+            <section id="guide-inventory" class="content-section">
+                <h1>Inventory</h1>
+                <p>How to send your inventory to the bot?</p>
+                <p><em>...</em></p>
+                <p>How to update your inventory in the bot?</p>
+                <p><em>...</em></p>
+                <p><em>See "Does my sent inventory automatically update?" in the FAQ.</em></p>
+            </section>
+
+            <section id="guide-sniper" class="content-section">
+                <h1>Sniper</h1>
+                <p>What it is and how to start using the bot's sniper feature.</p>
+                <p><em>...</em></p>
+            </section>
+
+            <!-- NEWS -->
+            <section id="news" class="content-section">
+                <h1>News</h1>
+                <p><em>Any major changes, fixes, updates, new features will be put here.</em></p>
+                <article class="news-item">
+                    <h3>Initial documentation live</h3>
+                    <time>October 2026</time>
+                    <p>The first version of the Antares documentation is now available.</p>
+                </article>
+            </section>
+
+            <!-- Credits -->
+            <section id="credits" class="content-section">
+                <h1>Credits</h1>
+                <p><strong>Antares</strong> uses various community tools and resources and I am grateful for their work.</p>
+                <p><em>...</em></p>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
