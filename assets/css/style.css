@@ -117,7 +117,10 @@ button {
     color: #fff;
 }
 
-
+.redirect {
+    color: var(--accent);
+    text-decoration: underline;
+}
 .menu-toggle {
     display: none;
 
@@ -423,9 +426,10 @@ button {
 
 .guide-img {
     display: block;
-    width: auto;
-    max-width: 100%;
-    height: auto;
+    width: 60%;
+    max-width: 80%;
+    height: 60%;
+    max-height: 80%;
     margin: 18px 0 24px;
     border-radius: 6px;
 }
