@@ -440,13 +440,55 @@ button {
 
 
 
+/* Expandable FAQ / Guide questions */
 .faq-item {
-    padding: 14px 0;
+    padding: 0;
     border-bottom: 1px solid var(--border);
 }
 
 .faq-item:last-child {
     border-bottom: 0;
+}
+
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 0;
+    cursor: pointer;
+    list-style: none;           /* remove default triangle in some browsers */
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    user-select: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;              /* Chrome/Safari */
+}
+
+.faq-item summary::after {
+    content: "›";
+    margin-left: auto;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    transition: transform 0.2s;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(90deg);
+}
+
+.faq-answer {
+    padding: 0 0 18px 26px;     /* indent the answer a bit */
+}
+
+.faq-answer p {
+    margin-bottom: 8px;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
 }
 
 .faq-item h3 {

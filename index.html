@@ -125,23 +125,35 @@
             <section id="faq" class="content-section">
                 <h1>FAQ</h1>
 
-                <div class="faq-item">
-                    <h3><span class="faq-label">Q</span> Can I invite the bot to my server? / Can I install it and use it in any server?</h3>
-                    <p><span class="faq-label">A</span> Not yet, but planned. Antares commands are currently available on a public Warframe alliance server. 
-                        With some commands also available in the bot's DMs.</p>
-                </div>
+                <details class="faq-item">
+                        <summary>
+                            <h3><span class="faq-label">Q</span> Can I invite the bot to my server? / Can I install it and use it in any server?</h3>
+                        </summary>
+                        <div class="faq-answer">
+                            <p><span class="faq-label">A</span> Not yet, but planned. Antares commands are currently available on a public Warframe alliance server. 
+                            With some commands also available in the bot's DMs.</p>
+                        </div>
+                </details>
 
-                <div class="faq-item">
-                    <h3><span class="faq-label">Q</span> Is the bot only for Warframe?</h3>
-                    <p><span class="faq-label">A</span> Yes. Antares is built exclusively around Warframe.</p>
-                </div>
+                <details class="faq-item">
+                        <summary>
+                            <h3><span class="faq-label">Q</span> Is the bot only for Warframe?</h3>
+                        </summary>
+                        <div class="faq-answer">
+                            <p><span class="faq-label">A</span> Yes. Antares is built exclusively around Warframe.</p>
+                        </div>
+                </details>
 
-                <div class="faq-item">
-                    <h3><span class="faq-label">Q</span> Does my submitted inventory update automatically?</h3>
-                    <p><span class="faq-label">A</span> Not everything updates automatically.</p>
-                    <p>Automatic updates depend on what's available through the Alecaframe public token. Currently, this includes owned/opened relics and trade history.</p>
-                    <p>If data isn't available through the public token, it cannot be automatically updated. In that case, Antares uses a snapshot of your last submitted <code>lastdata.dat</code> file.</p>
-                </div>
+                <details class="faq-item">
+                        <summary>
+                            <h3><span class="faq-label">Q</span> Does my submitted inventory update automatically?</h3>
+                        </summary>
+                        <div class="faq-answer">
+                            <p><span class="faq-label">A</span> Not everything updates automatically.</p>
+                            <p>Automatic updates depend on what's available through the Alecaframe public token. Currently, this includes owned/opened relics and trade history.</p>
+                            <p>If data isn't available through the public token, it cannot be automatically updated. In that case, Antares uses a snapshot of your last submitted <code>lastdata.dat</code> file.</p>
+                        </div>
+                </details>
             </section>
 
             <section id="basics" class="content-section">
@@ -237,34 +249,49 @@
                 <h2>1. Sending your inventory to the bot for the first time.</h2>
                     <p>You can do that with <code>/lastdata send</code> command.</p>
 
-                    <h3>- How to find your lastData.dat file?</h3>
-                    <p class="guide-text">It is located in <code>%localappdata%\AlecaFrame</code>. 
-                        You can paste this path into the Windows search bar to open the folder. 
-                        It is your inventory data and is used by commands like /stats, /lb, /build.
-                    </p>
-                    <img src="assets/img/lastdatapath.png" alt="Lastdata Path" class="guide-img">
-                    <img src="assets/img/lastdatalocation.png" alt="Lastdata Location" class="guide-img">
+                    <details class="faq-item">
+                        <summary>
+                            <span class="faq-label">Q</span> How to find your lastData.dat file?
+                        </summary>
+                        <div class="faq-answer">
+                            <p class="guide-text">It is located in <code>%localappdata%\AlecaFrame</code>. 
+                                You can paste this path into the Windows search bar to open the folder. 
+                                It is your inventory data and is used by commands like /stats, /lb, /build.
+                            </p>
+                            <img src="assets/img/lastdatapath.png" alt="Lastdata Path" class="guide-img">
+                            <img src="assets/img/lastdatalocation.png" alt="Lastdata Location" class="guide-img">
+                        </div>
+                    </details>
 
-                    <h3>- How to find your AlecaFrame public token?</h3>
-                    <p class="guide-text">It is required only once on the first send. 
-                        Once in AlecaFrame: Go to the "Stats" tab. 
-                        Press "Create public link". Press "Generate token" to copy it. 
-                        It is your public token used to access AlecaFrame API.
-                    </p>
-                    <img src="assets/img/token.png" alt="AlecaFrame Public Token" class="guide-img">
+                    <details class="faq-item">
+                        <summary>
+                            <span class="faq-label">Q</span> How to find your AlecaFrame public token?</summary>
+                        <div class="faq-answer">
+                            <p class="guide-text">It is required only once on the first send. 
+                                Once in AlecaFrame: Go to the "Stats" tab. 
+                                Press "Create public link". Press "Generate token" to copy it. 
+                                It is your public token used to access AlecaFrame API.
+                            </p>
+                            <img src="assets/img/token.png" alt="AlecaFrame Public Token" class="guide-img">
+                        </div>
+                    </details>
 
-                    <h3>- How to find your Warframe Market profile link?</h3>
-                    <p class="guide-text">It is used by some of the commands, not required. 
-                        Once in Warframe Market: Go to "My Profile". Simply copy the URL link to it.
-                    </p>
-                    <img src="assets/img/warframe_market.png" alt="Warframe Market Profile" class="guide-img">
-
+                    <details class="faq-item">
+                        <summary>
+                            <span class="faq-label">Q</span> How to find your Warframe Market profile link?</summary>
+                        <div class="faq-answer">
+                            <p class="guide-text">It is used by some of the commands, not required. 
+                                Once in Warframe Market: Go to "My Profile". Simply copy the URL link to it.
+                            </p>
+                            <img src="assets/img/warframe_market.png" alt="Warframe Market Profile" class="guide-img">
+                        </div>
+                    </details>
                 <h2>2. Updating your inventory</h2>
                     <p class="guide-text">Updating your inventory doesn't require Public Token. 
                         To update use <code>/lastdata send</code> command and only send <code>lastdata.dat</code> file. 
-                        You can also simply DM the bot with the file - without any command/text. 
-                        See "Does my submitted inventory update automatically?" in the FAQ.
+                        You can also simply DM the bot with the file - without any command/text.
                     </p>
+                
                 
                 <h2>3. Changing privacy settings of your inventory</h2>
                     <p class="guide-text">You can do that with <code>/lastdata settings</code> command.
@@ -294,7 +321,10 @@
 
             <section id="credits" class="content-section">
                 <h1>Credits</h1>
-                <p><strong>Antares</strong> uses various community tools and resources and I am grateful for their work.</p>
+                <p>
+                    <strong>Antares</strong> uses various community tools and resources and I am grateful for their work.
+                    I am also grateful for everyone who uses the bot, shares ideas, gives feedback, as I learned - and keep learning a lot from this project. 
+                </p>
                 <p><em>Content coming soon.</em></p>
             </section>
 
