@@ -250,12 +250,13 @@ a {
 .content {
     flex: 1;
     overflow-y: auto;
-    padding: 40px 50px 80px;
-    max-width: 860px;
 }
 
 .content-section {
     display: none;
+    max-width: 860px;
+    margin: 0;
+    padding: 40px 50px 80px 32px;
 }
 
 .content-section.active {
@@ -279,7 +280,7 @@ a {
 }
 
 .welcome-img {
-    width: 10%;
+    width: 6%;
     height: auto;
 }
 
@@ -332,7 +333,8 @@ a {
     font-weight: 600;
 }
 
-.faq-item code {
+.faq-item code,
+.content code {
     font-family: Consolas, "Courier New", monospace;
     font-size: 0.9em;
     color: var(--accent);
@@ -342,7 +344,9 @@ a {
     padding: 1px 5px;
 }
 
-
+.guide-text {
+    white-space: pre-line;
+}
 
 
 .badge {

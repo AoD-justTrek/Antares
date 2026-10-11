@@ -1,3 +1,4 @@
+// Sidebar group expand/collapse
 document.querySelectorAll('.sidebar-group-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
         btn.parentElement.classList.toggle('open');
@@ -28,29 +29,66 @@ if (backdrop) {
     backdrop.addEventListener('click', closeSidebar);
 }
 
+function getHashSection() {
+    return window.location.hash.slice(1);
+}
+
+
+function showSection(target) {
+    if (!target || !document.getElementById(target)) target = 'welcome';
+
+
+    document.querySelectorAll('.sidebar-link, .sidebar-sublink').forEach(el => {
+        el.classList.remove('active');
+    });
+    const activeLink = document.querySelector(`[data-section="${target}"]`);
+    if (activeLink) activeLink.classList.add('active');
+
+
+    document.querySelectorAll('.top-links a').forEach(el => {
+        el.classList.toggle('active', el.getAttribute('data-section') === target);
+    });
+
+
+    document.querySelectorAll('.content-section').forEach(sec => {
+        sec.classList.remove('active');
+    });
+    const section = document.getElementById(target);
+    if (section) {
+        section.classList.add('active');
+        document.getElementById('content').scrollTop = 0;
+    }
+
+
+    if (activeLink) {
+        let parent = activeLink.closest('.sidebar-group, .sidebar-subgroup');
+        while (parent) {
+            parent.classList.add('open');
+            parent = parent.parentElement.closest('.sidebar-group, .sidebar-subgroup');
+        }
+    }
+}
+
+
 document.querySelectorAll('[data-section]').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
-
         const target = link.getAttribute('data-section');
-
-        // Update active states in sidebar
-        document.querySelectorAll('.sidebar-link, .sidebar-sublink').forEach(el => {
-            el.classList.remove('active');
-        });
-        link.classList.add('active');
-
-        document.querySelectorAll('.content-section').forEach(sec => {
-            sec.classList.remove('active');
-        });
-        const section = document.getElementById(target);
-        if (section) {
-            section.classList.add('active');
-            document.getElementById('content').scrollTop = 0;
-        }
+        history.pushState(null, '', '#' + target);
+        showSection(target);
 
         if (window.innerWidth <= 768) {
             closeSidebar();
         }
     });
+});
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    showSection(getHashSection());
+});
+
+
+window.addEventListener('popstate', () => {
+    showSection(getHashSection());
 });

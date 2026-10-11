@@ -12,18 +12,22 @@
     <!-- Top Navigation -->
     <header class="top-nav">
         <div class="top-nav-inner">
-            <a href="index.html" class="brand">
-                <img src="assets/img/antares.png" alt="Antares logo" class="brand-logo">
-                <span class="brand-name">Antares</span>
-            </a>
+
             <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
+
+            <a href="#" class="brand" data-section="welcome">
+                <img src="assets/img/antares.png" alt="Antares logo" class="brand-logo">
+                <span class="brand-name">Antares</span>
+            </a>
+            
             <nav class="top-links">
-                <a href="index.html" class="active">Documentation</a>
-                <a href="terms.html">Terms of Use</a>
-                <a href="privacy.html">Privacy Policy</a>
+                <a href="#" class="active" data-section="welcome">Documentation</a>
+                <a href="#" data-section="terms">Terms of Use</a>
+                <a href="#" data-section="privacy">Privacy Policy</a>
             </nav>
+
         </div>
     </header>
 
@@ -33,98 +37,66 @@
         <!-- Left Sidebar -->
         <aside class="sidebar">
             <nav class="sidebar-nav">
-                <a href="#" class="sidebar-link active" data-section="welcome">Welcome</a>
-                <a href="#" class="sidebar-link" data-section="about">About</a>
-                <a href="#" class="sidebar-link" data-section="faq">FAQ</a>
+                <a href="#" class="sidebar-link active" data-section="welcome"><strong>Welcome</strong></a>
+                <a href="#" class="sidebar-link" data-section="about"><strong>About</strong></a>
+                <a href="#" class="sidebar-link" data-section="faq"><strong>FAQ</strong></a>
 
                 <!-- Commands (expandable) -->
                 <div class="sidebar-group">
                     <button class="sidebar-group-toggle" data-group="commands">
-                        Commands
+                        <strong>Commands</strong>
                         <span class="chevron">›</span>
                     </button>
                     <div class="sidebar-group-items" id="commands-group">
-                        <a href="#" class="sidebar-sublink" data-section="cmd-help">/help</a>
-                        <a href="#" class="sidebar-sublink" data-section="cmd-commands">/commands</a>
-                        <a href="#" class="sidebar-sublink" data-section="cmd-relics">/relics</a>
+                        <a href="#" class="sidebar-sublink" data-section="help">Help</a>
+                        <a href="#" class="sidebar-sublink" data-section="commands">Commands</a>
+                        <a href="#" class="sidebar-sublink" data-section="relics">Relics</a>
+                        <a href="#" class="sidebar-sublink" data-section="sniper">Sniper</a>
+                        <a href="#" class="sidebar-sublink" data-section="lastdata">Inventory Management</a>
+                        <a href="#" class="sidebar-sublink" data-section="stats">Stats</a>
+                        <a href="#" class="sidebar-sublink" data-section="leaderboard">Leaderboards</a>
 
-                        <!-- Inventory Management -->
-                        <div class="sidebar-subgroup">
-                            <button class="sidebar-group-toggle" data-group="cat-inventory">
-                                Inventory Management
-                                <span class="chevron">›</span>
-                            </button>
-                            <div class="sidebar-group-items">
-                                <a href="#" class="sidebar-sublink" data-section="cmd-lastdata-send">/lastdata send</a>
-                                <a href="#" class="sidebar-sublink" data-section="cmd-lastdata-settings">/lastdata settings</a>
-                                <a href="#" class="sidebar-sublink" data-section="cmd-lastdata-remove">/lastdata remove</a>
-                            </div>
-                        </div>
-
-                        <!-- Stats -->
-                        <div class="sidebar-subgroup">
-                            <button class="sidebar-group-toggle" data-group="cat-stats">
-                                Stats
-                                <span class="chevron">›</span>
-                            </button>
-                            <div class="sidebar-group-items">
-                                <a href="#" class="sidebar-sublink" data-section="cmd-stats">/stats</a>
-                            </div>
-                        </div>
-
-                        <!-- Leaderboards -->
-                        <div class="sidebar-subgroup">
-                            <button class="sidebar-group-toggle" data-group="cat-leaderboards">
-                                Leaderboards
-                                <span class="chevron">›</span>
-                            </button>
-                            <div class="sidebar-group-items">
-                                <a href="#" class="sidebar-sublink" data-section="cmd-lb-item">/lb_item</a>
-                                <a href="#" class="sidebar-sublink" data-section="cmd-lb-set">/lb_set</a>
-                                <a href="#" class="sidebar-sublink" data-section="cmd-lb-category">/lb_category</a>
-                            </div>
-                        </div>
 
                         <!-- Trackers -->
                         <div class="sidebar-subgroup">
                             <button class="sidebar-group-toggle" data-group="cat-trackers">
-                                Trackers
+                                <strong>Trackers</strong>
                                 <span class="chevron">›</span>
                             </button>
                             <div class="sidebar-group-items">
-                                <a href="#" class="sidebar-sublink" data-section="cmd-eda">/eda</a>
-                                <a href="#" class="sidebar-sublink" data-section="cmd-eta">/eta</a>
+                                <a href="#" class="sidebar-sublink" data-section="eda">Elite Deep Archimedea</a>
+                                <a href="#" class="sidebar-sublink" data-section="eta">Elite Temporal Archimedea</a>
                             </div>
                         </div>
 
                         <!-- Market -->
                         <div class="sidebar-subgroup">
                             <button class="sidebar-group-toggle" data-group="cat-market">
-                                Market
+                                <strong>Market</strong>
                                 <span class="chevron">›</span>
                             </button>
                             <div class="sidebar-group-items">
-                                <a href="#" class="sidebar-sublink" data-section="cmd-price_history">/price_history</a>
+                                <a href="#" class="sidebar-sublink" data-section="price_history">Price History</a>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
                 <!-- Guides (expandable) -->
                 <div class="sidebar-group">
                     <button class="sidebar-group-toggle" data-group="guides">
-                        Guides
+                        <strong>Guides</strong>
                         <span class="chevron">›</span>
                     </button>
                     <div class="sidebar-group-items" id="guides-group">
                         <a href="#" class="sidebar-sublink" data-section="guide-inventory">Getting Started: Inventory</a>
                         <a href="#" class="sidebar-sublink" data-section="guide-sniper">Getting Started: Sniper</a>
-                        <!-- Add more guides here -->
                     </div>
                 </div>
 
-                <a href="#" class="sidebar-link" data-section="news">News</a>
-                <a href="#" class="sidebar-link" data-section="credits">Credits</a>
+                <a href="#" class="sidebar-link" data-section="news"><strong>News</strong></a>
+                <a href="#" class="sidebar-link" data-section="credits"><strong>Credits</strong></a>
             </nav>
         </aside>
 
@@ -135,8 +107,8 @@
 
             <!-- WELCOME -->
             <section id="welcome" class="content-section active">
-                <img src="assets/img/Baro.webp" alt="Welcome" class="welcome-img">
-                <h1>Hello world</h1>
+                
+                <h1><img src="assets/img/Baro.webp" alt="Welcome" class="welcome-img">Hello world</h1>
                 <p>Welcome to the official documentation for <strong>Antares</strong> - a Discord bot built exclusively around Warframe.</p>
                 <p><em>Use the sidebar to explore commands, guides, and more.</em></p>
 
@@ -171,7 +143,7 @@
 
                 <div class="faq-item">
                     <h3><span class="faq-label">Q</span> Does my submitted inventory update automatically?</h3>
-                    <p><span class="faq-label">A</span> <strong>Not everything updates automatically.</strong> It's recommended to manually update your inventory in the bot from time to time.</p>
+                    <p><span class="faq-label">A</span> Not everything updates automatically. It's recommended to manually update your inventory in the bot from time to time.</p>
                     <p>Automatic updates depend on what's available through the Alecaframe public token. Currently, this includes owned/opened relics and trade history.</p>
                     <p>If data isn't available through the public token, it cannot be automatically updated. In that case, Antares uses a snapshot of your last submitted <code>lastdata.dat</code> file.</p>
                 </div>
@@ -180,77 +152,71 @@
 
 
             <!-- COMMANDS -->
-            <section id="cmd-help" class="content-section">
+            <section id="help" class="content-section">
                 <h1>/help</h1>
                 <p>Your basic help command. Has an optional argument to show a specific help message.</p>
             </section>
 
-            <section id="cmd-commands" class="content-section">
+            <section id="commands" class="content-section">
                 <h1>/commands</h1>
                 <p>Auto-generated list of all available commands, their descriptions, required and optional arguments.</pp>
             </section>
 
-            <section id="cmd-relics" class="content-section">
+            <section id="relics" class="content-section">
                 <h1>/relics</h1>
                 <p>Look up relics by part, set, resurgence, or ducats.</p>
                 <p><em>...</em></p>
             </section>
 
-            <section id="cmd-price_history" class="content-section">
+            <section id="price_history" class="content-section">
                 <h1>/price_history</h1>
                 <p>Shows the price history of an item.</p>
                 <p><em>...</em></p>
             </section>
 
-            <section id="cmd-lastdata-send" class="content-section">
+            <section id="lastdata" class="content-section">
                 <h1>/lastdata send</h1>
                 <p>Sends your inventory to the bot.</p>
                 <p><em>...</em></p>
-            </section>
 
-            <section id="cmd-lastdata-settings" class="content-section">
                 <h1>/lastdata settings</h1>
                 <p>Change your settings related to inventory.</p>
                 <p><em>...</em></p>
-            </section>
 
-            <section id="cmd-lastdata-remove" class="content-section">
                 <h1>/lastdata remove</h1>
                 <p>Remove your inventory from the bot.</p>
                 <p><em>...</em></p>
             </section>
 
-            <section id="cmd-lb-item" class="content-section">
+
+            <section id="leaderboard" class="content-section">
                 <h1>/lb item</h1>
                 <p>Shows a leaderboard for a specific item.</p>
                 <p><em>...</em></p>
-            </section>
 
-            <section id="cmd-lb-set" class="content-section">
                 <h1>/lb set</h1>
                 <p>Shows a leaderboard for a specific prime set.</p>
                 <p><em>...</em></p>
-            </section>
 
-            <section id="cmd-lb-category" class="content-section">
                 <h1>/lb category</h1>
                 <p>Shows a leaderboard for a specific category.</p>
                 <p><em>...</em></p>
             </section>
 
-            <section id="cmd-eda" class="content-section">
+
+            <section id="eda" class="content-section">
                 <h1>/eda</h1>
                 <p>Shows current Elite Deep Archimedea rotation.</p>
                 <p><em>...</em></p>
             </section>
 
-            <section id="cmd-eta" class="content-section">
+            <section id="eta" class="content-section">
                 <h1>/eta</h1>
                 <p>Shows current Elite Temporal Archimedea rotation.</p>
                 <p><em>...</em></p>
             </section>
 
-            <section id="cmd-stats" class="content-section">
+            <section id="stats" class="content-section">
                 <h1>/stats</h1>
                 <p>
                     Shows stats depending on what you pick, each category option has a unique view.
@@ -259,14 +225,81 @@
                 <p><em>...</em></p>
             </section>
 
+            <section id="sniper" class="content-section">
+                <h1>/sniper add</h1>
+                <p>Adds a new sniper to the bot.</p>
+                <p><em>...</em></p>
+
+                <h1>/sniper remove</h1>
+                <p>Removes a sniper from the bot.</p>
+                <p><em>...</em></p>
+
+                <h1>/sniper update</h1>
+                <p>Updates a sniper in the bot.</p>
+                <p><em>...</em></p>
+
+                <h1>/sniper mute</h1>
+                <p>Mutes a sniper in the bot.</p>
+                <p><em>...</em></p>
+
+                <h1>/sniper list</h1>
+                <p>Lists all snipers in the bot.</p>
+                <p><em>...</em></p>
+            </section>
+
+            
+
+
+
             <!-- GUIDES -->
             <section id="guide-inventory" class="content-section">
                 <h1>Inventory</h1>
-                <p>How to send your inventory to the bot?</p>
-                <p><em>...</em></p>
-                <p>How to update your inventory in the bot?</p>
-                <p><em>...</em></p>
-                <p><em>See "Does my sent inventory automatically update?" in the FAQ.</em></p>
+                <h2>Sending your inventory to the bot for the first time.</h2>
+                <p>After using <code>/lastdata send</code> command you will see a modal like this:</p>
+                <img src="assets/img/lastdata_modal.png" alt="Lastdata Modal" class="guide-img">
+
+                <p class="guide-text">
+                    You need to send <code>lastdata.dat</code> file and <code>Alecaframe Public Token</code>.
+                    Alecaframe Public Token is only required once on the first send.
+                    <code>Warframe Market profile link</code> is optional, can be sent anytime.
+                </p>
+
+                <h3>How to find your lastData.dat file?</h3>
+                <p class="guide-text">
+                    It is located in <code>%localappdata%\AlecaFrame</code>
+                    You can paste this path into the Windows search bar to open the folder
+                    It is your inventory data and is used by commands like /stats, /lb, /build
+                </p>
+                <img src="assets/img/lastdatalocation.png" alt="Lastdata Location" class="guide-img">
+
+                <h3>How to find your AlecaFrame public token?</h3>
+                <p class="guide-text">
+                    It is required only once on the first send.
+                    Once in AlecaFrame:
+                    Go to the "Stats" tab
+                    Press "Create public link"
+                    Press "Generate token" to copy it.
+                    It is your public token used to access AlecaFrame API
+                </p>
+                <img src="assets/img/token.png" alt="AlecaFrame Public Token" class="guide-img">
+
+                <h3>How to find your Warframe Market profile link?</h3>
+                <p class="guide-text">
+                    It is used by some of the commands, not required.
+                    Once in Warframe Market:
+                    Go to "My Profile"
+                    Simply copy the url link to it.
+                </p>
+                <img src="assets/img/warframe_market.png" alt="Warframe Market Profile" class="guide-img">
+
+                <h2>Updating your inventory</h2>
+                <p class="guide-text">
+                    Updating your inventory doesn't require Public Token.
+                    To update use <code>/lastdata send</code> command and only send <code>lastdata.dat</code> file.
+                    You can also simply DM the bot with the file - without any command/text.
+
+                    See "Does my sent inventory automatically update?" in the FAQ.
+                </p>
             </section>
 
             <section id="guide-sniper" class="content-section">
@@ -291,6 +324,18 @@
                 <h1>Credits</h1>
                 <p><strong>Antares</strong> uses various community tools and resources and I am grateful for their work.</p>
                 <p><em>...</em></p>
+            </section>
+
+            <!-- Terms of Use -->
+            <section id="terms" class="content-section">
+                <h1>Terms of Use</h1>
+                <p>Content coming soon.</p>
+            </section>
+
+            <!-- Privacy Policy -->
+            <section id="privacy" class="content-section">
+                <h1>Privacy Policy</h1>
+                <p>Content coming soon.</p>
             </section>
 
         </main>
