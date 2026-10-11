@@ -1,133 +1,119 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d0f0f">
     <title>Antares Documentation</title>
+
     <link rel="icon" href="assets/img/antares.png" type="image/png">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
 </head>
 <body>
 
-    <!-- Top Navigation -->
     <header class="top-nav">
         <div class="top-nav-inner">
-
-            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+            <button class="menu-toggle" id="menu-toggle"
+                    type="button" aria-label="Toggle sidebar"
+                    aria-controls="sidebar" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
 
-            <a href="#" class="brand" data-section="welcome">
+            <a href="#welcome" class="brand" data-section="welcome">
                 <img src="assets/img/antares.png" alt="Antares logo" class="brand-logo">
                 <span class="brand-name">Antares</span>
             </a>
-            
-            <nav class="top-links">
-                <a href="#" class="active" data-section="welcome">Documentation</a>
-                <a href="#" data-section="terms">Terms of Use</a>
-                <a href="#" data-section="privacy">Privacy Policy</a>
-            </nav>
 
+            <nav class="top-links" aria-label="Main navigation">
+                <a href="#welcome" data-section="welcome">Documentation</a>
+                <a href="#terms" data-section="terms">Terms of Use</a>
+                <a href="#privacy" data-section="privacy">Privacy Policy</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Documentation Layout -->
     <div class="docs-layout">
 
-        <!-- Left Sidebar -->
-        <aside class="sidebar">
-            <nav class="sidebar-nav">
-                <a href="#" class="sidebar-link active" data-section="welcome"><strong>Welcome</strong></a>
-                <a href="#" class="sidebar-link" data-section="about"><strong>About</strong></a>
-                <a href="#" class="sidebar-link" data-section="faq"><strong>FAQ</strong></a>
+        <aside class="sidebar" id="sidebar">
+            <nav class="sidebar-nav" aria-label="Documentation navigation">
+                <a href="#welcome" class="sidebar-link" data-section="welcome"><strong>Welcome</strong></a>
+                <a href="#about" class="sidebar-link" data-section="about"><strong>About</strong></a>
+                <a href="#faq" class="sidebar-link" data-section="faq"><strong>FAQ</strong></a>
 
-                <!-- Commands (expandable) -->
                 <div class="sidebar-group">
-                    <button class="sidebar-group-toggle" data-group="commands">
-                        <strong>Commands</strong>
-                        <span class="chevron">›</span>
+                    <button class="sidebar-group-toggle" type="button"
+                            data-group="commands" aria-expanded="false">
+                        <strong>Commands</strong><span class="chevron" aria-hidden="true">›</span>
                     </button>
+
                     <div class="sidebar-group-items" id="commands-group">
-                        <a href="#" class="sidebar-sublink" data-section="help">Help</a>
-                        <a href="#" class="sidebar-sublink" data-section="commands">Commands</a>
-                        <a href="#" class="sidebar-sublink" data-section="relics">Relics</a>
-                        <a href="#" class="sidebar-sublink" data-section="sniper">Sniper</a>
-                        <a href="#" class="sidebar-sublink" data-section="lastdata">Inventory Management</a>
-                        <a href="#" class="sidebar-sublink" data-section="stats">Stats</a>
-                        <a href="#" class="sidebar-sublink" data-section="leaderboard">Leaderboards</a>
+                        <a href="#help" class="sidebar-sublink" data-section="help">Help</a>
+                        <a href="#commands" class="sidebar-sublink" data-section="commands">Commands</a>
+                        <a href="#relics" class="sidebar-sublink" data-section="relics">Relics</a>
+                        <a href="#sniper" class="sidebar-sublink" data-section="sniper">Sniper</a>
+                        <a href="#lastdata" class="sidebar-sublink" data-section="lastdata">Inventory Management</a>
+                        <a href="#stats" class="sidebar-sublink" data-section="stats">Stats</a>
+                        <a href="#leaderboard" class="sidebar-sublink" data-section="leaderboard">Leaderboards</a>
 
-
-                        <!-- Trackers -->
                         <div class="sidebar-subgroup">
-                            <button class="sidebar-group-toggle" data-group="cat-trackers">
-                                <strong>Trackers</strong>
-                                <span class="chevron">›</span>
+                            <button class="sidebar-group-toggle" type="button"
+                                    data-group="cat-trackers" aria-expanded="false">
+                                <strong>Trackers</strong><span class="chevron" aria-hidden="true">›</span>
                             </button>
                             <div class="sidebar-group-items">
-                                <a href="#" class="sidebar-sublink" data-section="eda">Elite Deep Archimedea</a>
-                                <a href="#" class="sidebar-sublink" data-section="eta">Elite Temporal Archimedea</a>
+                                <a href="#eda" class="sidebar-sublink" data-section="eda">Elite Deep Archimedea</a>
+                                <a href="#eta" class="sidebar-sublink" data-section="eta">Elite Temporal Archimedea</a>
                             </div>
                         </div>
 
-                        <!-- Market -->
                         <div class="sidebar-subgroup">
-                            <button class="sidebar-group-toggle" data-group="cat-market">
-                                <strong>Market</strong>
-                                <span class="chevron">›</span>
+                            <button class="sidebar-group-toggle" type="button"
+                                    data-group="cat-market" aria-expanded="false">
+                                <strong>Market</strong><span class="chevron" aria-hidden="true">›</span>
                             </button>
                             <div class="sidebar-group-items">
-                                <a href="#" class="sidebar-sublink" data-section="price_history">Price History</a>
+                                <a href="#price_history" class="sidebar-sublink" data-section="price_history">Price History</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
-                <!-- Guides (expandable) -->
                 <div class="sidebar-group">
-                    <button class="sidebar-group-toggle" data-group="guides">
-                        <strong>Guides</strong>
-                        <span class="chevron">›</span>
+                    <button class="sidebar-group-toggle" type="button"
+                            data-group="guides" aria-expanded="false">
+                        <strong>Guides</strong><span class="chevron" aria-hidden="true">›</span>
                     </button>
                     <div class="sidebar-group-items" id="guides-group">
-                        <a href="#" class="sidebar-sublink" data-section="guide-inventory">Getting Started: Inventory</a>
-                        <a href="#" class="sidebar-sublink" data-section="guide-sniper">Getting Started: Sniper</a>
+                        <a href="#guide-inventory" class="sidebar-sublink" data-section="guide-inventory">Getting Started: Inventory</a>
+                        <a href="#guide-sniper" class="sidebar-sublink" data-section="guide-sniper">Getting Started: Sniper</a>
                     </div>
                 </div>
 
-                <a href="#" class="sidebar-link" data-section="news"><strong>News</strong></a>
-                <a href="#" class="sidebar-link" data-section="credits"><strong>Credits</strong></a>
+                <a href="#news" class="sidebar-link" data-section="news"><strong>News</strong></a>
+                <a href="#credits" class="sidebar-link" data-section="credits"><strong>Credits</strong></a>
             </nav>
         </aside>
 
         <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
-        <!-- Main Content -->
-        <main class="content" id="content">
+        <main class="content" id="content" tabindex="-1">
 
-            <!-- WELCOME -->
-            <section id="welcome" class="content-section active">
-                
-                <h1><img src="assets/img/Baro.webp" alt="Welcome" class="welcome-img">Hello world</h1>
+            <section id="welcome" class="content-section">
+                <h1><img src="assets/img/Baro.webp" alt="" class="welcome-img"> Hello world</h1>
                 <p>Welcome to the official documentation for <strong>Antares</strong> - a Discord bot built exclusively around Warframe.</p>
                 <p><em>Use the sidebar to explore commands, guides, and more.</em></p>
-
             </section>
 
-            <!-- ABOUT -->
             <section id="about" class="content-section">
                 <h1>About</h1>
                 <p><strong>Antares</strong> is a Warframe-focused Discord bot designed to help alliance and clan.</p>
                 <p><em>Made by -AoD-justTrek and -AoD-choobie.</em></p>
-
-                <p>
-                    <img src="assets/img/404SquadNotFound.png" alt="404 Squad Not Found alliance" class="alliance-img">
-                    It currently lives on a public Warframe alliance server "404 Squad Not Found" and provides tools tailored to the game.
-                </p>
+                <p><img src="assets/img/404SquadNotFound.png" alt="404 Squad Not Found alliance" class="alliance-img"> It currently lives on a public Warframe alliance server "404 Squad Not Found" and provides tools tailored to the game.</p>
                 <p><em>...</em></p>
             </section>
 
-            <!-- FAQ -->
             <section id="faq" class="content-section">
                 <h1>FAQ</h1>
 
@@ -149,9 +135,6 @@
                 </div>
             </section>
 
-
-
-            <!-- COMMANDS -->
             <section id="help" class="content-section">
                 <h1>/help</h1>
                 <p>Your basic help command. Has an optional argument to show a specific help message.</p>
@@ -159,7 +142,7 @@
 
             <section id="commands" class="content-section">
                 <h1>/commands</h1>
-                <p>Auto-generated list of all available commands, their descriptions, required and optional arguments.</pp>
+                <p>Auto-generated list of all available commands, their descriptions, required and optional arguments.</p>
             </section>
 
             <section id="relics" class="content-section">
@@ -178,31 +161,25 @@
                 <h1>/lastdata send</h1>
                 <p>Sends your inventory to the bot.</p>
                 <p><em>...</em></p>
-
                 <h1>/lastdata settings</h1>
                 <p>Change your settings related to inventory.</p>
                 <p><em>...</em></p>
-
                 <h1>/lastdata remove</h1>
                 <p>Remove your inventory from the bot.</p>
                 <p><em>...</em></p>
             </section>
 
-
             <section id="leaderboard" class="content-section">
                 <h1>/lb item</h1>
                 <p>Shows a leaderboard for a specific item.</p>
                 <p><em>...</em></p>
-
                 <h1>/lb set</h1>
                 <p>Shows a leaderboard for a specific prime set.</p>
                 <p><em>...</em></p>
-
                 <h1>/lb category</h1>
                 <p>Shows a leaderboard for a specific category.</p>
                 <p><em>...</em></p>
             </section>
-
 
             <section id="eda" class="content-section">
                 <h1>/eda</h1>
@@ -218,10 +195,7 @@
 
             <section id="stats" class="content-section">
                 <h1>/stats</h1>
-                <p>
-                    Shows stats depending on what you pick, each category option has a unique view.
-                    Your stats by default but you can also select specific user.
-                </p>
+                <p>Shows stats depending on what you pick, each category option has a unique view. Your stats by default but you can also select specific user.</p>
                 <p><em>...</em></p>
             </section>
 
@@ -229,77 +203,42 @@
                 <h1>/sniper add</h1>
                 <p>Adds a new sniper to the bot.</p>
                 <p><em>...</em></p>
-
                 <h1>/sniper remove</h1>
                 <p>Removes a sniper from the bot.</p>
                 <p><em>...</em></p>
-
                 <h1>/sniper update</h1>
                 <p>Updates a sniper in the bot.</p>
                 <p><em>...</em></p>
-
                 <h1>/sniper mute</h1>
                 <p>Mutes a sniper in the bot.</p>
                 <p><em>...</em></p>
-
                 <h1>/sniper list</h1>
                 <p>Lists all snipers in the bot.</p>
                 <p><em>...</em></p>
             </section>
 
-            
-
-
-
-            <!-- GUIDES -->
             <section id="guide-inventory" class="content-section">
                 <h1>Inventory</h1>
                 <h2>Sending your inventory to the bot for the first time.</h2>
                 <p>After using <code>/lastdata send</code> command you will see a modal like this:</p>
                 <img src="assets/img/lastdata_modal.png" alt="Lastdata Modal" class="guide-img">
 
-                <p class="guide-text">
-                    You need to send <code>lastdata.dat</code> file and <code>Alecaframe Public Token</code>.
-                    Alecaframe Public Token is only required once on the first send.
-                    <code>Warframe Market profile link</code> is optional, can be sent anytime.
-                </p>
+                <p class="guide-text">You need to send <code>lastdata.dat</code> file and <code>Alecaframe Public Token</code>. Alecaframe Public Token is only required once on the first send. <code>Warframe Market profile link</code> is optional, can be sent anytime.</p>
 
                 <h3>How to find your lastData.dat file?</h3>
-                <p class="guide-text">
-                    It is located in <code>%localappdata%\AlecaFrame</code>
-                    You can paste this path into the Windows search bar to open the folder
-                    It is your inventory data and is used by commands like /stats, /lb, /build
-                </p>
+                <p class="guide-text">It is located in <code>%localappdata%\AlecaFrame</code>. You can paste this path into the Windows search bar to open the folder. It is your inventory data and is used by commands like /stats, /lb, /build.</p>
                 <img src="assets/img/lastdatalocation.png" alt="Lastdata Location" class="guide-img">
 
                 <h3>How to find your AlecaFrame public token?</h3>
-                <p class="guide-text">
-                    It is required only once on the first send.
-                    Once in AlecaFrame:
-                    Go to the "Stats" tab
-                    Press "Create public link"
-                    Press "Generate token" to copy it.
-                    It is your public token used to access AlecaFrame API
-                </p>
+                <p class="guide-text">It is required only once on the first send. Once in AlecaFrame: Go to the "Stats" tab. Press "Create public link". Press "Generate token" to copy it. It is your public token used to access AlecaFrame API.</p>
                 <img src="assets/img/token.png" alt="AlecaFrame Public Token" class="guide-img">
 
                 <h3>How to find your Warframe Market profile link?</h3>
-                <p class="guide-text">
-                    It is used by some of the commands, not required.
-                    Once in Warframe Market:
-                    Go to "My Profile"
-                    Simply copy the url link to it.
-                </p>
+                <p class="guide-text">It is used by some of the commands, not required. Once in Warframe Market: Go to "My Profile". Simply copy the URL link to it.</p>
                 <img src="assets/img/warframe_market.png" alt="Warframe Market Profile" class="guide-img">
 
                 <h2>Updating your inventory</h2>
-                <p class="guide-text">
-                    Updating your inventory doesn't require Public Token.
-                    To update use <code>/lastdata send</code> command and only send <code>lastdata.dat</code> file.
-                    You can also simply DM the bot with the file - without any command/text.
-
-                    See "Does my sent inventory automatically update?" in the FAQ.
-                </p>
+                <p class="guide-text">Updating your inventory doesn't require Public Token. To update use <code>/lastdata send</code> command and only send <code>lastdata.dat</code> file. You can also simply DM the bot with the file - without any command/text. See "Does my submitted inventory update automatically?" in the FAQ.</p>
             </section>
 
             <section id="guide-sniper" class="content-section">
@@ -308,31 +247,27 @@
                 <p><em>...</em></p>
             </section>
 
-            <!-- NEWS -->
             <section id="news" class="content-section">
                 <h1>News</h1>
                 <p><em>Any major changes, fixes, updates, new features will be put here.</em></p>
                 <article class="news-item">
                     <h3>Documentation</h3>
-                    <time>10.10.2026</time>
+                    <time datetime="2026-10-10">10.10.2026</time>
                     <p>The first version of the Antares documentation.</p>
                 </article>
             </section>
 
-            <!-- Credits -->
             <section id="credits" class="content-section">
                 <h1>Credits</h1>
                 <p><strong>Antares</strong> uses various community tools and resources and I am grateful for their work.</p>
                 <p><em>...</em></p>
             </section>
 
-            <!-- Terms of Use -->
             <section id="terms" class="content-section">
                 <h1>Terms of Use</h1>
                 <p>Content coming soon.</p>
             </section>
 
-            <!-- Privacy Policy -->
             <section id="privacy" class="content-section">
                 <h1>Privacy Policy</h1>
                 <p>Content coming soon.</p>
@@ -341,6 +276,5 @@
         </main>
     </div>
 
-    <script src="assets/js/script.js"></script>
 </body>
 </html>
