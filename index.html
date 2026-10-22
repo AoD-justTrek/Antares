@@ -84,6 +84,7 @@
                     </button>
                     <div class="sidebar-group-items" id="guides-group">
                         <a href="#guide-inventory" class="sidebar-sublink" data-section="guide-inventory">Inventory</a>
+                        <a href="#guide-ign" class="sidebar-sublink" data-section="guide-ign">In-Game Name</a>
                         <a href="#guide-sniper" class="sidebar-sublink" data-section="guide-sniper">Sniper</a>
                     </div>
                 </div>
@@ -110,13 +111,12 @@
                 <p><strong>Antares</strong> is a Warframe-focused Discord bot designed to help alliance and clan.</p>
                 <p><em>Made by -AoD-justTrek and -AoD-choobie.</em></p>
                 <p class="guide-text">
-                    Bot is currently available on a public Warframe alliance server <img src="assets/img/404SquadNotFound.png" alt="404 Squad Not Found alliance" class="alliance-img"> <a href="https://discord.gg/RTUJTHkKHV" class="redirect">404 Squad Not Found</a>
-                    and provides tools tailored to the game.
+                    Bot is currently available on two discord servers and provides tools tailored to the game.
 
                     It offers many commands, such as displaying information about current weeklies/bounties/fissures - "Trackers".
-                    Various commands related to warframe.market website.
+                    Some market commands.
                     More advanced commands that can show you intresting information about your inventory using AlecaFrame.
-
+                    
                     This also includes the ability to share/check each others builds, stats etc.
                     or view leaderboards to see who has the most of something, like resource or mission played.
                 </p>
@@ -130,7 +130,7 @@
                             <h3><span class="faq-label">Q</span> Can I invite the bot to my server? / Can I install it and use it in any server?</h3>
                         </summary>
                         <div class="faq-answer">
-                            <p><span class="faq-label">A</span> Not yet, but planned. Antares commands are currently available on a public Warframe alliance server. 
+                            <p><span class="faq-label">A</span> Not yet, but maybe in the future. Antares commands are currently available on a public Warframe alliance server. 
                             With some commands also available in the bot's DMs.</p>
                         </div>
                 </details>
@@ -146,12 +146,12 @@
 
                 <details class="faq-item">
                         <summary>
-                            <h3><span class="faq-label">Q</span> Does my submitted inventory update automatically?</h3>
+                            <h3><span class="faq-label">Q</span> Does mine and others inventory update automatically?</h3>
                         </summary>
                         <div class="faq-answer">
                             <p><span class="faq-label">A</span> Not everything updates automatically.</p>
-                            <p>Automatic updates depend on what's available through the Alecaframe public token. Currently, this includes owned/opened relics and trade history.</p>
-                            <p>If data isn't available through the public token, it cannot be automatically updated. In that case, Antares uses a snapshot of your last submitted <code>lastdata.dat</code> file.</p>
+                            <p>What updates automatically daily: all owned relics, opened relics, trades, platinum, endo, credits, aya, orokin ducats.</p>
+                            <p>For anything else Antares uses latest snapshot of the submitted <code>lastdata.dat</code> file.</p>
                         </div>
                 </details>
             </section>
@@ -303,6 +303,33 @@
                     <p class="guide-text">You can do that anytime with <code>/lastdata remove</code> command.</p>
             </section>
 
+            <section id="guide-ign" class="content-section">
+                <h1>Guide to IGN </h1>
+                <p>
+                    Small guide to In-Game Name and how it works in Aleca.
+                </p>
+
+                <h2>Why there's a guide for IGN?</h2>
+                    <p class="guide-text">Because when you change your In-Game Name, AlecaFrame treats it as new "account" and resets your stats & trade history.
+                        Antares now provides a simple way to preserve it / display it / continue it.
+                    </p>
+
+                <h2>So about changing it</h2>
+                    <p class="guide-text">After changing your in-game, and seeing Aleca use that name,
+                        simply generate new <strong>public token</strong> and send it in <code>/lastdata send</code> command, 
+                        along with required file - basicly the same way registering for the first time is done.
+                        The bot will notice and handle it properly.
+                    </p>
+                    <p class="guide-text">After that's done your account stats history is preserved & simply continued with different In-Game Name - like it should.
+                        You can view your continuous history in a <code>/graphs</code> command that shows all graphs similiar to the ones in Aleca:
+                    </p>
+                    <img src="assets/img/graph_ign.png" alt="Graph Showing IGNs" class="guide-img">
+                    <p class="guide-text">Or your trading history continued in <code>/market history</code> - might add more to it later.
+                        You can change your name however many times you got platinum for.
+                    </p>
+
+            </section>
+
             <section id="guide-sniper" class="content-section">
                 <h1>Sniper</h1>
                 <p>What it is and how to start using the bot's sniper feature.</p>
@@ -313,19 +340,34 @@
                 <h1>News</h1>
                 <p><em>Any major changes, fixes, updates, new features will be put here.</em></p>
                 <article class="news-item">
-                    <h3>Documentation</h3>
+                    <h3>New Command, Account Data Preservation & few changes</h3>
+                    <time datetime="2026-10-22">22.10.2026</time>
+                    <p class="guide-text">New command "/graphs" added.
+                        Added a way to preserve stats/trading data after IGN change.
+                        
+                        "/stats relics" change:
+                            Owned relics counts are now Auto-updated daily, like in leaderboards for them - to avoid confusion.
+                            Opened relics graph moved to "/graphs" command.
+
+                        Leaderboard for these items are now also Auto-updated daily:
+                            platinum, endo, credits, aya, orokin ducats
+                    </p>
+                </article>
+                <article class="news-item">
+                    <h3>Documentation Up</h3>
                     <time datetime="2026-10-10">10.10.2026</time>
                     <p>The first version of the Antares documentation.</p>
                 </article>
+                
             </section>
 
             <section id="credits" class="content-section">
                 <h1>Credits</h1>
                 <p>
-                    <strong>Antares</strong> uses various community tools and resources and I am grateful for their work.
-                    I am also grateful for everyone who uses the bot, shares ideas, gives feedback, as I learned - and keep learning a lot from this project. 
+                    <strong>Antares</strong> uses various community tools and resources and I am grateful for the work that was put into them.
+                    I also want to thank everyone who uses the bot, shares ideas and gives feedback.
                 </p>
-                <p><em>Content coming soon.</em></p>
+                <p><em>More content may come here soon.</em></p>
             </section>
 
             <section id="terms" class="content-section">
